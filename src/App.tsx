@@ -12,17 +12,21 @@ import ageIcon from "./assets/images/icon-age.svg";
 import muscleIcon from "./assets/images/icon-muscle.svg";
 import pregnancyIcon from "./assets/images/icon-pregnancy.svg";
 import raceIcon from "./assets/images/icon-race.svg";
+// decorative accents
+// import patternLineLeft from "./assets/images/pattern-curved-line-left.svg";
+// import patternLineRight from "./assets/images/pattern-curved-line-right.svg";
+type Unit = "metric" | "imperial";
 
 function App() {
-  const units = "imperial";
+  const [selectedUnit] = useState<Unit>("metric");
+
   const isCalculated = false;
 
   return (
     <main className="min-h-screen py-8 px-6">
-      {/* wrapper div */}
-      <div className="max-w-6xl mx-auto">
-        {/* hero & form */}
-        <section className="">
+      {/* hero & form */}
+      <section className="">
+        <div className="max-w-6xl mx-auto">
           {/* intro, blue gradient bg */}
           <div className="">
             <img src={logo} alt="" />
@@ -67,20 +71,32 @@ function App() {
                 </div>
               </fieldset>
               {/* metric units */}
-              {units === "metric" && (
+              {selectedUnit === "metric" && (
                 <div className="">
                   <div className="">
                     <label htmlFor="metricCm">Height</label>
-                    <input type="number" id="metricCm" />
+                    <input
+                      type="number"
+                      inputMode="decimal"
+                      step="0.25"
+                      id="metricCm"
+                    />
+                    <span className="">cm</span>
                   </div>
                   <div className="">
                     <label htmlFor="metricKg">Weight</label>
-                    <input type="number" id="metricKg" />
+                    <input
+                      type="number"
+                      inputMode="decimal"
+                      step="any"
+                      id="metricKg"
+                    />
+                    <span className="">kg</span>
                   </div>
                 </div>
               )}
               {/* imperial units */}
-              {units === "imperial" && (
+              {selectedUnit === "imperial" && (
                 <div className="">
                   <fieldset className="">
                     <legend>Height</legend>
@@ -90,7 +106,13 @@ function App() {
                         className="sr-only">
                         Feet
                       </label>
-                      <input type="number" id="imperialFeet" />
+                      <input
+                        type="number"
+                        inputMode="decimal"
+                        step="1"
+                        id="imperialFeet"
+                      />
+                      <span className="">ft</span>
                     </div>
                     <div className="">
                       <label
@@ -98,14 +120,26 @@ function App() {
                         className="sr-only">
                         Inches
                       </label>
-                      <input type="number" id="imperialInches" />
+                      <input
+                        type="number"
+                        inputMode="decimal"
+                        step="0.25"
+                        id="imperialInches"
+                      />
+                      <span className="">in</span>
                     </div>
                   </fieldset>
                   <div className="">
                     <label htmlFor="imperialLbs" className="">
                       Weight
                     </label>
-                    <input type="number" id="imperialLbs" />
+                    <input
+                      type="number"
+                      inputMode="decimal"
+                      step="0.1"
+                      id="imperialLbs"
+                    />
+                    <span className="">lbs</span>
                   </div>
                 </div>
               )}
@@ -129,15 +163,19 @@ function App() {
                   <output className="">22.0</output>
                   <p className="">
                     Your BMI suggests you're a healthy weight. Your
-                    ideal weight is between 132lbs - 178lbs.
+                    ideal weight is between{" "}
+                    <strong>132lbs and 178lbs</strong>.
                   </p>
                 </>
               )}
             </div>
           </div>
-        </section>
-        {/* about BMI results and Tips section */}
-        <section className="">
+        </div>
+      </section>
+
+      {/* about BMI results and Tips section */}
+      <section className="">
+        <div className="max-w-6xl mx-auto">
           <div className="">
             {/* decorative only image */}
             <img src={manEatingImg} alt="" />
@@ -185,9 +223,12 @@ function App() {
               </p>
             </li>
           </ul>
-        </section>
-        {/* limitations of BMI section */}
-        <section className="">
+        </div>
+      </section>
+
+      {/* limitations of BMI section */}
+      <section className="">
+        <div className="max-w-6xl mx-auto">
           {/* limitations grid */}
           <div className="">
             <div className="">
@@ -235,7 +276,7 @@ function App() {
                 <p className="">
                   Expectant mothers experience weight gain due to
                   their growing baby. Maintaining a healthy
-                  pre-pregnancy BMI is advisable to minimise health
+                  pre-pregnancy BMI is advisable to minimize health
                   risks for both mother and child.
                 </p>
               </li>
@@ -246,13 +287,13 @@ function App() {
                   Certain health concerns may affect individuals of
                   some Black and Asian origins at lower BMIs than
                   others. To learn more, it is advised to discuss this
-                  with your GP or practice nurse.
+                  with your doctor.
                 </p>
               </li>
             </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }
