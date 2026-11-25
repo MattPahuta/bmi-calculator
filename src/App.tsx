@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import logo from "./assets/images/logo.svg";
 
+import ResultMeaning from "./components/ResultMeaning";
+import Tips from "./components/Tips";
 
 // limitations icons
 import genderIcon from "./assets/images/icon-gender.svg";
@@ -10,7 +12,7 @@ import muscleIcon from "./assets/images/icon-muscle.svg";
 import pregnancyIcon from "./assets/images/icon-pregnancy.svg";
 import raceIcon from "./assets/images/icon-race.svg";
 // decorative accents
-// import patternLineLeft from "./assets/images/pattern-curved-line-left.svg";
+
 // import patternLineRight from "./assets/images/pattern-curved-line-right.svg";
 
 import type { Unit } from "./types";
@@ -172,9 +174,10 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* about BMI results and Tips section */}
-
+      {/* what your BMI result means section */}
+      <ResultMeaning />
+      {/* BMI tips section */}
+      <Tips />
 
       {/* limitations of BMI section */}
       <section className="">

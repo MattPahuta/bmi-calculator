@@ -1,15 +1,14 @@
 
-import type { Card } from '../types';
+import type { CardType } from '../types';
 
-function TipCard() {
+function TipCard( { icon, title, description }:CardType ) {
 
   return (
     <li className="">
-      <img src={eatingIcon} alt="" className="" />
-      <h3 className="">Healthy eating</h3>
+      <img src={icon} alt="" className="" />
+      <h3 className="">{title}</h3>
       <p className="">
-        Healthy eating promotes weight control, disease prevention,
-        better digestion, immunity, mental clarity, and mood.
+        {description}
       </p>
     </li>
   );

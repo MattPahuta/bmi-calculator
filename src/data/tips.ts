@@ -1,19 +1,26 @@
-import type { Card } from "../types";
+import type { CardType } from "../types";
 
-export const tips: Card[] = [
+import eatingIcon from "../assets/images/icon-eating.svg";
+import exerciseIcon from "../assets/images/icon-exercise.svg";
+import sleepIcon from "../assets/images/icon-sleep.svg";
+
+export const tips: CardType[] = [
   {
-    icon: "../assets/images/icon-eating.svg",
+    icon: eatingIcon,
     title: "Healthy eating",
-    description: "Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.",
+    description:
+      "Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.",
   },
   {
-    icon: "../assets/images/icon-exercise.svg",
+    icon: exerciseIcon,
     title: "Regular exercise",
-    description: "Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.",
+    description:
+      "Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.",
   },
   {
-    icon: "../assets/images/icon-sleep.svg",
+    icon: sleepIcon,
     title: "Adequate sleep",
-    description: "Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.",
+    description:
+      "Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.",
   },
 ];
