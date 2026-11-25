@@ -5,3 +5,9 @@ export interface InfoItem {
   title: string;
   description: string;
 }
+
+export interface BmiResult {
+  bmi: number;
+  classification: string;
+  range: string;
+}
