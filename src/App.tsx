@@ -4,13 +4,8 @@ import logo from "./assets/images/logo.svg";
 
 import ResultMeaning from "./components/ResultMeaning";
 import Tips from "./components/Tips";
+import Limitations from "./components/Limitations";
 
-// limitations icons
-import genderIcon from "./assets/images/icon-gender.svg";
-import ageIcon from "./assets/images/icon-age.svg";
-import muscleIcon from "./assets/images/icon-muscle.svg";
-import pregnancyIcon from "./assets/images/icon-pregnancy.svg";
-import raceIcon from "./assets/images/icon-race.svg";
 // decorative accents
 
 // import patternLineRight from "./assets/images/pattern-curved-line-right.svg";
@@ -178,75 +173,8 @@ function App() {
       <ResultMeaning />
       {/* BMI tips section */}
       <Tips />
-
       {/* limitations of BMI section */}
-      <section className="">
-        <div className="max-w-6xl mx-auto">
-          {/* limitations grid */}
-          <div className="">
-            <div className="">
-              <h2 className="">Limitations of BMI</h2>
-              <p className="">
-                Although BMI is often a practical indicator of healthy
-                weight, it is not suited for every person. Specific
-                groups should carefully consider their BMI outcomes,
-                and in certain cases, the measurement may not be
-                beneficial to use.
-              </p>
-            </div>
-            {/* limitations list grid */}
-            <ul className="">
-              <li className="">
-                <img src={genderIcon} alt="" />
-                <h3 className="">Gender</h3>
-                <p className="">
-                  The development and body fat composition of girls
-                  and boys vary with age. Consequently, a child's age
-                  and gender are considered when evaluating their BMI.
-                </p>
-              </li>
-              <li className="">
-                <img src={ageIcon} alt="" />
-                <h3 className="">Age</h3>
-                <p className="">
-                  In aging individuals, increased body fat and muscle
-                  loss may cause BMI to underestimate body fat
-                  content.
-                </p>
-              </li>
-              <li className="">
-                <img src={muscleIcon} alt="" />
-                <h3 className="">Muscle</h3>
-                <p className="">
-                  BMI may misclassify muscular individuals as
-                  overweight or obese, as it doesn't differentiate
-                  muscle from fat.
-                </p>
-              </li>
-              <li className="">
-                <img src={pregnancyIcon} alt="" />
-                <h3 className="">Pregnancy</h3>
-                <p className="">
-                  Expectant mothers experience weight gain due to
-                  their growing baby. Maintaining a healthy
-                  pre-pregnancy BMI is advisable to minimize health
-                  risks for both mother and child.
-                </p>
-              </li>
-              <li className="">
-                <img src={raceIcon} alt="" />
-                <h3 className="">Race</h3>
-                <p className="">
-                  Certain health concerns may affect individuals of
-                  some Black and Asian origins at lower BMIs than
-                  others. To learn more, it is advised to discuss this
-                  with your doctor.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <Limitations />
     </main>
   );
 }

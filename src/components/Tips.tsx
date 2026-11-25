@@ -7,7 +7,7 @@ function Tips() {
       <div className="max-w-6xl mx-auto">
         <ul className="">
           {tips.map(({ icon, title, description }) => (
-            <TipCard icon={icon} title={title} description={description} />
+            <TipCard key={title} icon={icon} title={title} description={description} />
           ))}
         </ul>
       </div>
