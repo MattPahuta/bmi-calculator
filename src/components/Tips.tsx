@@ -3,15 +3,13 @@ import TipCard from "./TipCard";
 
 function Tips() {
   return (
-    <section className="">
-      <div className="max-w-6xl mx-auto">
-        <ul className="">
-          {tips.map(({ icon, title, description }) => (
-            <TipCard key={title} icon={icon} title={title} description={description} />
-          ))}
-        </ul>
-      </div>
-    </section>
+    <div className="">
+      <ul className="">
+        {tips.map((tip) => (
+          <TipCard key={tip.title} {...tip} />
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -1,7 +1,6 @@
-
 export type Unit = "metric" | "imperial";
 
-export interface CardType {
+export interface InfoItem {
   icon: string;
   title: string;
   description: string;

@@ -1,4 +1,4 @@
-import type { CardType } from "../types";
+import type { InfoItem } from "../types";
 
 // limitations icons
 import genderIcon from "../assets/images/icon-gender.svg";
@@ -7,7 +7,7 @@ import muscleIcon from "../assets/images/icon-muscle.svg";
 import pregnancyIcon from "../assets/images/icon-pregnancy.svg";
 import raceIcon from "../assets/images/icon-race.svg";
 
-export const limitations: CardType[] = [
+export const limitations: InfoItem[] = [
   {
     icon: genderIcon,
     title: "Gender",

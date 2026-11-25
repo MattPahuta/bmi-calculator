@@ -1,10 +1,10 @@
-import type { CardType } from "../types";
+import type { InfoItem } from "../types";
 
 import eatingIcon from "../assets/images/icon-eating.svg";
 import exerciseIcon from "../assets/images/icon-exercise.svg";
 import sleepIcon from "../assets/images/icon-sleep.svg";
 
-export const tips: CardType[] = [
+export const tips: InfoItem[] = [
   {
     icon: eatingIcon,
     title: "Healthy eating",

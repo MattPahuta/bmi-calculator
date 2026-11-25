@@ -1,6 +1,6 @@
-import type { CardType } from '../types';
+import type { InfoItem } from '../types';
 
-function LimitationCard({ icon, title, description }:CardType ) {
+function LimitationCard({ icon, title, description }:InfoItem ) {
   return (
     <li className="">
       <img src={icon} alt="" className="" />

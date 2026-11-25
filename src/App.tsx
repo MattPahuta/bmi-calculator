@@ -1,18 +1,10 @@
 import { useState } from "react";
 
 import logo from "./assets/images/logo.svg";
-
 import ResultMeaning from "./components/ResultMeaning";
-import Tips from "./components/Tips";
 import Limitations from "./components/Limitations";
 
-// decorative accents
-
-// import patternLineRight from "./assets/images/pattern-curved-line-right.svg";
-
 import type { Unit } from "./types";
-
-// type Unit = "metric" | "imperial";
 
 function App() {
   const [selectedUnit] = useState<Unit>("metric");
@@ -171,8 +163,6 @@ function App() {
       </section>
       {/* what your BMI result means section */}
       <ResultMeaning />
-      {/* BMI tips section */}
-      <Tips />
       {/* limitations of BMI section */}
       <Limitations />
     </main>

@@ -1,5 +1,6 @@
 import { limitations } from "../data/limitations";
 import LimitationCard from "./LimitationCard";
+// import patternLineRight from "../assets/images/pattern-curved-line-right.svg";
 
 function Limitations() {
   return (
@@ -17,8 +18,8 @@ function Limitations() {
         </div>
         {/* limitations list grid */}
         <ul className="">
-          {limitations.map(({ icon, title, description }) => ( 
-            <LimitationCard key={title} icon={icon} title={title} description={description} />
+          {limitations.map((limitation) => (
+            <LimitationCard key={limitation.title} {...limitation} />
           ))}
         </ul>
       </div>

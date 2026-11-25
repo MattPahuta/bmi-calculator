@@ -1,5 +1,6 @@
 // import patternLineLeft from "../assets/images/pattern-curved-line-left.svg"
 import manEatingImg from "../assets/images/image-man-eating.webp";
+import Tips from "./Tips";
 
 function ResultMeaning() {
   return (
@@ -22,6 +23,7 @@ function ResultMeaning() {
             </p>
           </div>
         </div>
+        <Tips />
       </div>
     </section>
   );
