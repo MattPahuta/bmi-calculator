@@ -1,7 +1,7 @@
 
-import type { CardType } from '../types';
+import type { InfoItem } from '../types';
 
-function TipCard( { icon, title, description }:CardType ) {
+function TipCard( { icon, title, description }:InfoItem ) {
 
   return (
     <li className="">

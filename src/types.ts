@@ -6,8 +6,14 @@ export interface InfoItem {
   description: string;
 }
 
-export interface BmiResult {
+type Classification = "underweight" | "healthy weight" | "overweight" | "obese";
+type Range = {
+  min: number;
+  max: number; 
+}
+
+export interface BmiInfo {
   bmi: number;
-  classification: string;
-  range: string;
+  classification: Classification;
+  range: Range;
 }

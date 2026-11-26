@@ -8,16 +8,17 @@
 /**
  * 22.0
  * Your BMI suggests you’re a healthy weight. 
- * Your ideal weight is between 9st 6lbs - 12st 10lbs.
+ * Your ideal weight is between 132lbs - 178lbs.
  */
+import type { BmiInfo } from "../types";
 
-function BmiResult() {
-  const isCalculated = false;
-
+function BmiResult({ result }: { result: BmiInfo | null }) {
+  // const isCalculated = false;
+  console.log(result);
   return (
     <div className="">
       {/* empty state */}
-      {!isCalculated && (
+      {!result&& (
         <>
           <h3 className="">Welcome!</h3>
           <p className="">
@@ -27,13 +28,13 @@ function BmiResult() {
         </>
       )}
       {/* calculated state */}
-      {isCalculated && (
+      {result && (
         <>
           <h3 className="">Your BMI is...</h3>
-          <output className="">22.0</output>
+          <output className="">{result.bmi.toFixed(1)}</output>
           <p className="">
-            Your BMI suggests you're a healthy weight. Your ideal
-            weight is between <strong>132lbs and 178lbs</strong>.
+            Your BMI suggests you're a {result.classification}. Your ideal
+            weight is between <strong>{result.range.min}lbs</strong> and <strong>{result.range.max}lbs</strong>.
           </p>
         </>
       )}

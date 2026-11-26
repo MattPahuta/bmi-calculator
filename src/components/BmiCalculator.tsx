@@ -1,10 +1,18 @@
 import { useState } from "react";
 import BmiResult from "./BmiResult";
+import type { Unit, BmiInfo } from "../types";
 
 function BmiCalculator() {
-  const [selectedUnit, setSelectedUnit] = useState<
-    "metric" | "imperial"
-  >("metric");
+  const [selectedUnit, setSelectedUnit] = useState<Unit>("metric");
+
+  const sampleBmiInfo: BmiInfo = {
+    bmi: 22.0,
+    classification: "healthy weight",
+    range: {
+      min: 132,
+      max: 178,
+    }
+  }
 
   return (
     <div className="">
@@ -110,7 +118,7 @@ function BmiCalculator() {
         )}
       </form>
       {/* Result */}
-      <BmiResult />
+      <BmiResult result={sampleBmiInfo} />
     </div>
   );
 }
