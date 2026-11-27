@@ -8,7 +8,6 @@ export interface InfoItem {
 
 export type Classification = "underweight" | "healthy" | "overweight" | "obese";
 
-
 export interface Range {
   min: number;
   max: number; 

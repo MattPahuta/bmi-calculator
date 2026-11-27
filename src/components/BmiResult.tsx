@@ -1,14 +1,20 @@
 import type { BmiInfo, Classification } from "../types";
 
+/**
+ * ToDo: 
+ * - Fix hardcoding of 'lbs' in result
+ * - range.min/max need to be rounded
+ */
+
 interface BmiResultProps {
   result: BmiInfo | null;
 }
 
 const bmiStatement: Record<Classification, string> = {
-  underweight: "you are underweight",
+  underweight: "you're underweight",
   healthy: "you're a healthy weight",
-  overweight: "you are overweight",
-  obese: "you are obese"
+  overweight: "you're overweight",
+  obese: "you're obese"
 }
 
 function BmiResult({ result }: BmiResultProps) {
