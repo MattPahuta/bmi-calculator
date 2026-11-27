@@ -7,7 +7,7 @@ function BmiCalculator() {
 
   const sampleBmiInfo: BmiInfo = {
     bmi: 22.0,
-    classification: "healthy weight",
+    classification: "healthy",
     range: {
       min: 132,
       max: 178,
